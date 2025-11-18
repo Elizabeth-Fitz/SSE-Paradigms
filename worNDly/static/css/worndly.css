@@ -1,0 +1,130 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f7e3e1;
+    margin: 0;
+    padding: 0;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+select {
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    padding: 0.1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+.board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 10px;
+}
+.header-menu button {
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+}
+.header-menu button:hover {
+    background-color: #f9f9f9;
+}
+.header-menu button:focus {
+    background-color: #f9f9f9;
+}
+
+.header-text h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.keyboard-2 {
+    margin: 0.5rem 0;
+}
+
+.keyboard-button {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.keyboard-button:hover {
+    background-color: #f9f9f9;
+}
+.keyboard-button:focus {
+    background-color: #f9f9f9;
+}
+
+.keyboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+.keyboard-container div {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.tile {
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.worndly-body {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#backspace {
+    font-size: 1rem;
+    font-weight: bolder;
+}

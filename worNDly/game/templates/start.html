@@ -1,0 +1,19 @@
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/start.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <div class="start-body">
+        <h1>WorNDly</h1>
+        <h2>Get 6 chances to guess a 5-letter word.</h2>
+        
+        <button onclick="window.location.href='{% url 'game:worndly' %}'">Play</button>
+
+        <p id="date">{% now "F j, Y" %}</p>
+        <p>Edited by Elizabeth Fitzgerald</p>
+        <p>Elo Okor</p>
+        <p>Danielle Radford</p>
+    </div>
+{% endblock body%}

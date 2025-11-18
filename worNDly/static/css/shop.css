@@ -1,0 +1,98 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f7e3e1;
+    margin: 0;
+    padding: 0;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+.content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 10px;
+}
+.header-menu button {
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+}
+.header-menu button:hover {
+    background-color: #f9f9f9;
+}
+.header-menu button:focus {
+    background-color: #f9f9f9;
+}
+
+.header-text h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.shop-body {
+    max-width: 50vw;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#count {
+    width: 50px;
+    text-align: center;
+}
+
+#plus, #minus {
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid #333;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+#plus:hover, #minus:hover {
+    background-color: #f9f9f9;
+}
+
+#purchase {
+    cursor: pointer;
+    background-color: hsl(354, 65%, 81%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+#purchase:hover {
+    background-color: #eaacaf;
+}
+
+#user-balance {
+    font-size: 1.5rem;
+    color: black;
+    margin: 0;
+}

@@ -1,0 +1,86 @@
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/worndly.css' %}">
+    {% comment %} <script src="{% static 'js/worndly.js' %}"></script> {% endcomment %}
+{% endblock head %}
+
+{% block body %}
+
+
+    <div class="worndly-body">
+        <div class="header">
+            <div class="header-text">
+                <h1 onclick="window.location.href='{% url 'game:worndly' %}'">WorNDly</h1>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="br">Portuguese</option>
+                    
+                </select>
+            </div>
+
+            <div class="header-menu">
+                <button onclick="window.location.href='{% url 'game:dashboard' %}'">Dashboard</button>
+                <button onclick="window.location.href='{% url 'game:shop' %}'">Buy Coins</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="board">
+                {% for row in board %}
+                    <div class="row">
+                        {% for letter in row %}
+                            <div class="tile">{{ tile }}</div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="keyboard-container">
+                <div class="keyboard-1">
+                    <button class="keyboard-button">q</button>
+                    <button class="keyboard-button">w</button>
+                    <button class="keyboard-button">e</button>
+                    <button class="keyboard-button">r</button>
+                    <button class="keyboard-button">t</button>
+                    <button class="keyboard-button">y</button>
+                    <button class="keyboard-button">u</button>
+                    <button class="keyboard-button">i</button>
+                    <button class="keyboard-button">o</button>
+                    <button class="keyboard-button">p</button>
+                </div>
+                <div class="keyboard-2">
+                    <button class="keyboard-button">a</button>
+                    <button class="keyboard-button">s</button>
+                    <button class="keyboard-button">d</button>
+                    <button class="keyboard-button">f</button>
+                    <button class="keyboard-button">g</button>
+                    <button class="keyboard-button">h</button>
+                    <button class="keyboard-button">j</button>
+                    <button class="keyboard-button">k</button>
+                    <button class="keyboard-button">l</button>
+                </div>
+                <div class="keyboard-3">
+                    <button class="keyboard-button">Enter</button>
+                    <button class="keyboard-button">z</button>
+                    <button class="keyboard-button">x</button>
+                    <button class="keyboard-button">c</button>
+                    <button class="keyboard-button">v</button>
+                    <button class="keyboard-button">b</button>
+                    <button class="keyboard-button">n</button>
+                    <button class="keyboard-button">m</button>
+                    <button class="keyboard-button" id="backspace">⌫</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <form id="hiddenForm" action= "./worndly" method="POST" style="display:none;">
+        {% csrf_token %}
+        <input type="hidden" id="wins" name="wins">
+        <input type="hidden" id="num_attempts" name="num_attempts">
+      </form>
+    <script src="{% static 'js/worndly.js' %}"></script>
+{% endblock body%}

@@ -1,0 +1,30 @@
+<!doctype HTML>
+
+<html>
+<head>
+    <title>{% block title %}Default Page Title{% endblock %}</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+		  h2 { text-align:center;
+		  }
+		  p{ margin:auto;
+			padding: 5px;	 
+            max-width: 375px; 
+             }
+		  input[type='submit']{
+			display:block;
+			max-width:375px;
+			margin:auto;
+           padding: 5px;
+
+			}	
+
+    </style>
+</head>
+<body>
+  {% block body %} Default text {%endblock%} 
+  
+</body>
+</html>

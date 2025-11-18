@@ -1,0 +1,40 @@
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/shop.css' %}">
+    <script> const csrf_token = '{{ csrf_token }}'; </script>
+{% endblock head %}
+
+{% block body %}
+    <div class="shop-body">
+        <div class="header">
+            <div class="header-text">
+                <h1 onclick="window.location.href='{% url 'game:worndly' %}'">WorNDly</h1>
+            </div>
+
+            <div class="header-menu">
+                <button onclick="window.location.href='{% url 'game:dashboard' %}'">Dashboard</button>
+                <button onclick="window.location.href='{% url 'game:shop' %}'">Buy Coins</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <h2>Shop</h2>
+                <h3>Current balance: <span id="user-balance">{{ balance }}</span></h3>
+            </div>
+
+            <div class="purchase">
+                <h3>How many games would you like to purchase?</h3>
+
+                <button id="minus">-</button>
+                <input type="text" id="count" value="1">
+                <button id="plus">+</button>
+                
+                <button id="purchase">Purchase</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/shop.js' %}"></script>
+{% endblock body %}
